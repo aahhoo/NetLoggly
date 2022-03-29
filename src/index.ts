@@ -7,12 +7,12 @@ function createLogger(
 ) {
   const logger = winston.createLogger(options);
 
-  if (!process.env.WINSTON_LOGGLY_TOKEN || !logglyOptions?.token)
-    throw new Error("WINSTON_LOGGLY_TOKEN is not set");
+  if (!process.env.WINSTON_LOGGLY_TOKEN && !logglyOptions?.token)
+    throw new Error("WINSTON_LOGGLY_TOKEN or token is not set");
 
   logger.add(
     new Loggly({
-      token: process.env.WINSTON_LOGGLY_TOKEN,
+      token: process.env.WINSTON_LOGGLY_TOKEN || "",
       subdomain: "netelsoft",
       json: true,
       bufferOptions: {
