@@ -3,18 +3,22 @@
   "version": "1.0.0",
   "description": "A logger for Netelsoft",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
   "scripts": {
-    "preinstall": "npm run build",
+    "prepare": "npm run build",
     "build": "tsc"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "winston": "^3.6.0",
-    "winston-loggly-bulk": "^3.2.1"
+    "winston-loggly-bulk": "^3.2.1",
+    "@types/winston-loggly-bulk": "^3.0.3"
   },
   "devDependencies": {
-    "@types/winston-loggly-bulk": "^3.0.3",
     "typescript": "^4.6.3"
   }
 }
