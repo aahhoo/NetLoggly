@@ -1,0 +1,20 @@
+{
+  "name": "netelsoft-loggly",
+  "version": "1.0.0",
+  "description": "A logger for Netelsoft",
+  "main": "dist/index.js",
+  "scripts": {
+    "preinstall": "npm run build",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "winston": "^3.6.0",
+    "winston-loggly-bulk": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/winston-loggly-bulk": "^3.0.3",
+    "typescript": "^4.6.3"
+  }
+}
