@@ -26,4 +26,4 @@ function createLogger(
   return logger;
 }
 
-export default { createLogger, flushLogsAndExit };
+export { createLogger, flushLogsAndExit };
