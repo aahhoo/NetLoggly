@@ -3,7 +3,7 @@ import { Loggly, flushLogsAndExit, LogglyOptions } from "winston-loggly-bulk";
 
 function createLogger(
   options?: winston.LoggerOptions,
-  logglyOptions?: Partial<LogglyOptions>,
+  logglyOptions?: Partial<LogglyOptions>
 ) {
   const logger = winston.createLogger(options);
 
@@ -20,6 +20,12 @@ function createLogger(
         retriesInMilliseconds: 5000,
       },
       ...logglyOptions,
+    })
+  );
+
+  logger.add(
+    new winston.transports.Console({
+      format: winston.format.prettyPrint({ colorize: true, depth: 3 }),
     })
   );
 

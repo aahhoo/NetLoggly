@@ -1,6 +1,6 @@
 {
   "name": "netelsoft-loggly",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A logger for Netelsoft",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
