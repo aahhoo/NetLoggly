@@ -1,6 +1,6 @@
 {
   "name": "netelsoft-loggly",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A logger for Netelsoft",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,9 +16,7 @@
   "dependencies": {
     "winston": "^3.6.0",
     "winston-loggly-bulk": "^3.2.1",
-    "@types/winston-loggly-bulk": "^3.0.3"
-  },
-  "devDependencies": {
+    "@types/winston-loggly-bulk": "^3.0.3",
     "typescript": "^4.6.3"
   }
 }
